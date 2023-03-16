@@ -6,9 +6,9 @@ const buffer = await fs.readFile("test/model.crfsuite");
 FS.writeFile("/model", buffer);
 const tagger = new Tagger();
 tagger.open("/model");
-const xseq = [['walk', 'shop'], ['clean', 'shop']]
+console.log(tagger.labels())
+const xseq = [['walk', 'shop'], ['clean', 'shop'], ['walk']]
 const result = tagger.tag(xseq);
 tagger.close();
 tagger.delete();
-
-console.log(result)
+console.log(result);

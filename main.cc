@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: MIT
 #include <emscripten.h>
 #include <emscripten/bind.h>
 #include <emscripten/val.h>
@@ -27,7 +28,7 @@ class TrainerWrapper {
     return emscripten::val::array(this->trainer->params());
   }
 
-  emscripten::val GetPrams() {
+  emscripten::val GetPramsObject() {
     CRFSuite::StringList params = this->trainer->params();
     emscripten::val result = emscripten::val::object();
 
@@ -39,7 +40,7 @@ class TrainerWrapper {
     return result;
   }
 
-  void SetParams(const emscripten::val& options) {
+  void SetParamsObject(const emscripten::val& options) {
     emscripten::val keys =
         emscripten::val::global("Object").call<emscripten::val>("keys",
                                                                 options);
@@ -206,8 +207,8 @@ EMSCRIPTEN_BINDINGS(my_module) {
 
   class_<TrainerWrapper>("Trainer")
       .smart_ptr_constructor("Trainer", &std::make_shared<TrainerWrapper>)
-      .function("setParams", &TrainerWrapper::SetParams)
-      .function("getParams", &TrainerWrapper::GetPrams)
+      .function("setParamsObject", &TrainerWrapper::SetParamsObject)
+      .function("getParamsObject", &TrainerWrapper::GetPramsObject)
       .function("params", &TrainerWrapper::Params)
       .function("get", &TrainerWrapper::Get)
       .function("set", &TrainerWrapper::Set)
