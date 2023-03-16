@@ -29,6 +29,7 @@
 		"dist"
 	],
 	"scripts": {
+		"prepublishOnly": "npm run build",
 		"build": "./compile.sh && rollup -c"
 	}
 }
