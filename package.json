@@ -1,6 +1,33 @@
 {
-  "name": "web-crfsuite",
-  "type": "module",
-  "license": "MIT",
-  "repository": "seanghay/web-crfsuite"
+	"name": "web-crfsuite",
+	"version": "0.0.1",
+	"license": "MIT",
+	"type": "module",
+	"types": "dist/index.d.ts",
+	"browser": "./dist/browser.js",
+	"repository": "seanghay/web-crfsuite",
+	"devDependencies": {
+		"@rollup/plugin-commonjs": "^24.0.1",
+		"@rollup/plugin-node-resolve": "^15.0.1",
+		"@types/node": "^18.15.3",
+		"rollup": "^3.19.1",
+		"rollup-plugin-swc3": "^0.8.0",
+		"typescript": "^4.9.5"
+	},
+	"exports": {
+		"./package.json": "./package.json",
+		"./dist/crfsuite.wasm": "./dist/crfsuite.wasm",
+		".": {
+			"types": "./dist/index.d.ts",
+			"default": "./dist/index.js",
+			"browser": "./dist/browser.js",
+			"node": "./dist/node.js"
+		}
+	},
+	"files": [
+		"dist"
+	],
+	"scripts": {
+		"build": "./compile.sh && rollup -c"
+	}
 }

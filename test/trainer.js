@@ -1,6 +1,6 @@
 import fs from 'node:fs/promises'
-import loader from '../build/crfsuite.mjs';
-const { Trainer, FS } = await loader();
+import CRFSuite from '../dist/node.js'
+const { Trainer, FS } = CRFSuite;
 
 let xseq = [['walk'], ['walk', 'shop'], ['clean', 'shop']]
 let yseq = ['sunny', 'sunny', 'rainy']
@@ -8,14 +8,13 @@ let yseq = ['sunny', 'sunny', 'rainy']
 const trainer = new Trainer();
 
 trainer.setParamsObject({
-  period: '10'
+	period: '10'
 })
 
 console.log(trainer.getParamsObject());
 trainer.set('period', '10')
 
 console.log(trainer.get('period'))
-
 trainer.append(xseq, yseq);
 trainer.train("/model.crfsuite");
 trainer.delete();
