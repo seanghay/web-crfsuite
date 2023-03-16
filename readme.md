@@ -20,7 +20,7 @@ trainer.train("/model.crfsuite");
 const buffer = FS.readFile("/model.crfsuite");
 
 // tagging example
-const tagger = new CRFSuite.Trainer();
+const tagger = new CRFSuite.Tagger();
 
 // writing to the virtual file system
 FS.writeFile("/model.crfsuite", buffer);
