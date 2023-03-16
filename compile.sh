@@ -40,5 +40,4 @@ rm -rf build/* && emcc $INCLUDES --bind -Os --memory-init-file 0 \
   -s EXPORTED_RUNTIME_METHODS=['FS'] \
   -o build/crfsuite.mjs
 
-
 # -s NODERAWFS=1 \

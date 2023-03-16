@@ -1,3 +1,6 @@
 {
-	"type": "module"
+  "name": "web-crfsuite",
+  "type": "module",
+  "license": "MIT",
+  "repository": "seanghay/web-crfsuite"
 }
