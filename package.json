@@ -3,7 +3,7 @@
 	"version": "0.0.1",
 	"license": "MIT",
 	"type": "module",
-	"types": "dist/index.d.ts",
+	"types": "dist/crfsuite.d.ts",
 	"browser": "./dist/browser.js",
 	"repository": "seanghay/web-crfsuite",
 	"devDependencies": {
@@ -17,9 +17,10 @@
 	"exports": {
 		"./package.json": "./package.json",
 		"./dist/crfsuite.wasm": "./dist/crfsuite.wasm",
+		"./dist/crfsuite.js": "./dist/crfsuite.js",
 		".": {
-			"types": "./dist/index.d.ts",
-			"default": "./dist/index.js",
+			"types": "./dist/crfsuite.d.ts",
+			"default": "./dist/node.js",
 			"browser": "./dist/browser.js",
 			"node": "./dist/node.js"
 		}

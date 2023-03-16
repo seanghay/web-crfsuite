@@ -6,10 +6,10 @@ import { defineRollupSwcMinifyOption, minify } from "rollup-plugin-swc3";
 
 await mkdir("./dist/", { recursive: true });
 await copyFile("./build/crfsuite.wasm", "./dist/crfsuite.wasm");
-await copyFile("./index.d.ts", "./dist/index.d.ts");
+await copyFile("./crfsuite.d.ts", "./dist/crfsuite.d.ts");
 
 export default defineConfig({
-	input: ["index.js", "node.js", "browser.js"],
+	input: ["crfsuite.js", "node.js", "browser.js"],
 	output: {
 		dir: "dist",
 		format: "esm",

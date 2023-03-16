@@ -29,11 +29,13 @@ declare type FileSystem = {
 	readFile(file: string): any;
 };
 
-declare const FS: FileSystem;
-declare const CRFSuite = {
-	Tagger: Tagger,
-	Trainer: Trainer,
-	FS: FS,
+declare type WebCRFSuite = {
+	Tagger: Tagger;
+	Trainer: Trainer;
+	FS: FileSystem;
 };
+
+
+declare const CRFSuite: WebCRFSuite;
 
 export default CRFSuite;
