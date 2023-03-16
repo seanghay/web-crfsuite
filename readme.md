@@ -58,4 +58,5 @@ Without these awesome projects from the community, this wouldn't be possible.
 - [manuels/hpdf.js/compile.sh](https://github.com/manuels/hpdf.js/blob/master/compile.sh)
 - [Porting-Examples-and-Demos](https://github.com/emscripten-core/emscripten/wiki/Porting-Examples-and-Demos#utilities)
 - [https://web.dev/emscripten-embedding-js-snippets/](https://web.dev/emscripten-embedding-js-snippets/)
-- [https://github.com/pinqy520/yoga-layout-wasm/blob/master/Makefile](https://github.com/pinqy520/yoga-layout-wasm/blob/master/Makefile)
+- [pinqy520/yoga-layout-wasm/blob/master/Makefile](https://github.com/pinqy520/yoga-layout-wasm/blob/master/Makefile)
+- [shuding/yoga-wasm-web](https://github.com/shuding/yoga-wasm-web)
