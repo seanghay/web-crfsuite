@@ -30,11 +30,10 @@ declare type FileSystem = {
 };
 
 declare type WebCRFSuite = {
-	Tagger: Tagger;
-	Trainer: Trainer;
+	Tagger: typeof Tagger;
+	Trainer: typeof Trainer;
 	FS: FileSystem;
 };
-
 
 declare const CRFSuite: WebCRFSuite;
 
