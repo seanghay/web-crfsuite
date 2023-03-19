@@ -1,4 +1,4 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
+/* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
 */
@@ -129,8 +129,9 @@ table {
 }
 
 body {
-	font-family: 'Noto Sans Khmer', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-		Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+	font-family: "Noto Sans Khmer", system-ui, -apple-system, BlinkMacSystemFont,
+		"Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+		sans-serif;
 	font-size: 16px;
 	background: seagreen;
 	color: white;
@@ -149,11 +150,23 @@ body.ready .app {
 	flex-direction: column;
 }
 
+.loader {
+	font-size: 1.6rem;
+	font-weight: bold;
+	display: grid;
+	place-items: center;
+	min-height: 100vh;
+}
+
+body.ready .loader {
+	display: none;
+}
+
 textarea {
 	resize: none;
 	border: 2px solid hsl(146, 50%, 30%);
 	padding: 1rem;
-	margin: .6em 0;
+	margin: 0.6em 0;
 	font-size: 1.4em;
 	outline: none;
 	background-color: #fff;
@@ -171,7 +184,6 @@ strong {
 	color: rgba(255, 255, 255, 0.7);
 	font-weight: bold;
 }
-
 
 a {
 	color: white;
